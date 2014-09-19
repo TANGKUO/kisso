@@ -18,6 +18,10 @@ Usage
 
 （2）跨域登录
 
+Kisso 登录跨域流程图
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/cl.jpg "Kisso,crossdomain login")
+
+
 hosts:
 --------------------------------------------
 127.0.0.1 sso.test.com
