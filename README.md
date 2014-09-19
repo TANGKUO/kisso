@@ -18,9 +18,7 @@ Usage
 
 （2）跨域登录
 
-Kisso 登录跨域流程图
 ![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/cl.jpg "Kisso,crossdomain login")
-
 
 hosts:
 --------------------------------------------
