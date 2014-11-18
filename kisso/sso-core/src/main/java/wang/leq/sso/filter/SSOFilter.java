@@ -29,6 +29,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import wang.leq.sso.SSOConstant;
 import wang.leq.sso.Token;
 import wang.leq.sso.client.SSOHelper;
 import wang.leq.sso.common.util.HttpUtil;
@@ -69,6 +70,8 @@ public class SSOFilter implements Filter {
 				 * 重新登录
 				 */
 				SSOHelper.loginAgain(req, res);
+			} else {
+				req.setAttribute(SSOConstant.SSO_TOKEN_ATTR, token);
 			}
 		}
 		chain.doFilter(request, response);

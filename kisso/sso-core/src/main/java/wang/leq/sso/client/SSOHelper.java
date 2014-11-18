@@ -26,6 +26,7 @@ import org.slf4j.LoggerFactory;
 
 import wang.leq.sso.KissoHelper;
 import wang.leq.sso.SSOConfig;
+import wang.leq.sso.SSOConstant;
 import wang.leq.sso.Token;
 import wang.leq.sso.TokenCache;
 import wang.leq.sso.common.CookieHelper;
@@ -188,5 +189,17 @@ public class SSOHelper {
 			return uid.getValue();
 		}
 		return null;
+	}
+
+	/**
+	 * 获取当前请求 Token
+	 * <p>
+	 * 		此属性在过滤器拦截器中设置，业务系统中调用有效
+	 * @param request
+	 * @return 
+	 * @return Token
+	 */
+	public static Object attrToken( HttpServletRequest request ) {
+		return request.getAttribute(SSOConstant.SSO_TOKEN_ATTR);
 	}
 }

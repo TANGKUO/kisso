@@ -78,4 +78,10 @@ public class SSOConstant {
 	 */
 	public final static String SSO_AUTH_COOKIE_NAME = "pid";
 	public final static int SSO_AUTH_COOKIE_MAXAGE = 180;
+
+	/**
+	 * 拦截器判断后设置 Token至当前请求
+	 * request.setAttribute("ssotoken_attr", token)
+	 */
+	public final static String SSO_TOKEN_ATTR = "ssotoken_attr";
 }
