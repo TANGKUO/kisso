@@ -102,7 +102,7 @@ public class HttpUtil {
 	 * @param request
 	 * @return boolean
 	 */
-	public boolean isGet(HttpServletRequest request) {
+	public static boolean isGet(HttpServletRequest request) {
 		if ("GET".equalsIgnoreCase(request.getMethod())) {
 			return true;
 		}
@@ -115,7 +115,7 @@ public class HttpUtil {
 	 * @param request
 	 * @return boolean
 	 */
-	public boolean isPost(HttpServletRequest request) {
+	public static boolean isPost(HttpServletRequest request) {
 		if ("POST".equalsIgnoreCase(request.getMethod())) {
 			return true;
 		}
