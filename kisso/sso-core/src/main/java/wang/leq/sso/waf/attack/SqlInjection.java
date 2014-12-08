@@ -21,7 +21,7 @@ package wang.leq.sso.waf.attack;
  * @author   hubin
  * @Date	 2014-5-8 	 
  */
-public class SqlInjection {
+public class SqlInjection implements Istrip {
 
 	/**
 	 * @Description SQL注入内容剥离
@@ -29,7 +29,7 @@ public class SqlInjection {
 	 * 				待处理内容
 	 * @return
 	 */
-	public static String strip(String value) {
+	public String strip(String value) {
 
 		//剥离SQL注入部分代码
 		return value.replaceAll("('.+--)|(--)|(\\|)|(%7C)", "");

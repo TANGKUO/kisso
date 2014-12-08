@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
  * @author   hubin
  * @Date	 2014-5-8 	 
  */
-public class XSS {
+public class XSS implements Istrip {
 
 	/**
 	 * @Description XSS脚本内容剥离
@@ -31,7 +31,7 @@ public class XSS {
 	 * 				待处理内容
 	 * @return
 	 */
-	public static String strip(String value) {
+	public String strip(String value) {
 		if (value != null) {
 			// NOTE: It's highly recommended to use the ESAPI library and uncomment the following line to
 			// avoid encoded attacks.

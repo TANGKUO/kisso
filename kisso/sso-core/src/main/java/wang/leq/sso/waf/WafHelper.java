@@ -37,7 +37,7 @@ public class WafHelper {
 			return null;
 		}
 
-		return XSS.strip(value);
+		return new XSS().strip(value);
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class WafHelper {
 			return null;
 		}
 
-		return SqlInjection.strip(value);
+		return new SqlInjection().strip(value);
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class WafHelper {
 			return null;
 		}
 
-		return XSS.strip(SqlInjection.strip(value));
+		return stripXSS(stripSqlInjection(value));
 	}
 
 }
