@@ -15,7 +15,7 @@
  */
 package wang.leq.sso;
 
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Token缓存到HashMap
@@ -25,9 +25,20 @@ import java.util.HashMap;
  */
 public class TokenCacheMap extends TokenCache {
 	/**
+	 * 测试使用、生产环境建议使用其他缓存框架
+	 * 例如：redis memcached ..
+	 */
+	
+	/**
 	 * Token Map
 	 */
-	private static HashMap<String, Token> tokenMap = new HashMap<String, Token>();
+	private static ConcurrentHashMap<String, Token> tokenMap = null;
+			
+	static {
+		if (tokenMap == null) {
+			tokenMap = new ConcurrentHashMap<String, Token>();
+		}
+	}
 
 	/**
 	 * 根据key获取SSO票据
