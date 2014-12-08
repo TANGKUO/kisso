@@ -67,7 +67,7 @@ public class SSOConstant {
 	/**
 	 * 登录相关常量
 	 */
-	public final static String SSO_LOGIN_URL = "sso.github.com";
+	public final static String SSO_LOGIN_URL = "http://sso.github.com";
 	
 	/**
 	 * SSO 跨域相关常量
