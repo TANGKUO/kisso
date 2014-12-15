@@ -50,6 +50,13 @@ public class SSOConfig {
 	}
 
 	/**
+	 * PropertiesUtil
+	 */
+	public static PropertiesUtil getSSOProperties() {
+		return prop;
+	}
+	
+	/**
 	 * 编码格式默认 UTF-8
 	 */
 	public static String getEncoding() {
