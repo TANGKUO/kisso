@@ -44,6 +44,8 @@ public class SSOConfig {
 				p.load(in);
 				prop = new PropertiesUtil(p);
 			} catch (Exception e) {
+				/** 防止空指针异常 */
+				prop = new PropertiesUtil(new Properties());
 				logger.error("read sso.properties error. ", e.toString());
 			}
 		}
