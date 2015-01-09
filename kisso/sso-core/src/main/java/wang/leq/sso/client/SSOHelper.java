@@ -31,6 +31,7 @@ import wang.leq.sso.Token;
 import wang.leq.sso.TokenCache;
 import wang.leq.sso.common.CookieHelper;
 import wang.leq.sso.common.encrypt.Encrypt;
+import wang.leq.sso.common.encrypt.MD5;
 import wang.leq.sso.common.util.HttpUtil;
 import wang.leq.sso.common.util.ReflectUtil;
 import wang.leq.sso.exception.KissoException;
@@ -183,10 +184,9 @@ public class SSOHelper {
 		Cookie uid = CookieHelper.findCookieByName(request, SSOConfig.getCookieName());
 		if (uid != null) {
 			/**
-			 * MD5 会重复处理不采用
-			 * 直接返回Cookie加密内容为key
+			 * MD5 Cookie
 			 */
-			return uid.getValue();
+			return MD5.toMD5(uid.getValue());
 		}
 		return null;
 	}
