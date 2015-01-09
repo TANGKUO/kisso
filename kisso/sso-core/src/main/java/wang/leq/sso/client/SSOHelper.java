@@ -186,7 +186,10 @@ public class SSOHelper {
 			/**
 			 * MD5 Cookie
 			 */
-			return MD5.toMD5(uid.getValue());
+			StringBuffer cmd5 = new StringBuffer();
+			cmd5.append("ssocookie_");
+			cmd5.append(MD5.toMD5(uid.getValue()));
+			return cmd5.toString();
 		}
 		return null;
 	}
