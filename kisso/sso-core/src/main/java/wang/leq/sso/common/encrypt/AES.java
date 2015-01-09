@@ -37,7 +37,6 @@ public class AES extends Encrypt {
 	SecretKeySpec secretKey;
 
 	public AES() {
-		setKey(SSOConfig.getSecretKey());//secret key
 	}
 
 	public AES(String str) {
@@ -108,6 +107,7 @@ public class AES extends Encrypt {
 	 */
 	@Override
 	public String encrypt(String value, String key) throws Exception {
+		this.setKey(key);
 		return this.encryptAES(value);
 	}
 
@@ -116,8 +116,8 @@ public class AES extends Encrypt {
 	 */
 	@Override
 	public String decrypt(String value, String key) throws Exception {
+		this.setKey(key);
 		return this.decryptAES(value);
-
 	}
 
 	/**
