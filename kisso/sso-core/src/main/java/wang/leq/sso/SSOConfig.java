@@ -162,6 +162,13 @@ public class SSOConfig {
 	public static String getLoginUrl() {
 		return prop.get("sso.login.url", SSOConstant.SSO_LOGIN_URL);
 	}
+
+	/**
+	 * SSO 退出地址
+	 */
+	public static String getLogoutUrl() {
+		return prop.get("sso.logout.url", SSOConstant.SSO_LOGOUT_URL);
+	}
 	
 	/**
 	 * 跨域信任 Cookie 名称

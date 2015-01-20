@@ -121,14 +121,14 @@ public class SSOHelper {
 	}
 
 	/**
-	 * 退出当前登录状态
-	 * <p>
-	 * @param request
-	 * @param response
-	 * @return boolean <p>true 成功, false 失败</p>
+	 * SSO 退出登录
 	 */
-	public static boolean logout(HttpServletRequest request, HttpServletResponse response) {
-		return logout(request, response, ReflectUtil.getConfigTokenCache());
+	public static void logout( HttpServletRequest request, HttpServletResponse response ) throws IOException {
+		//delete cookie
+		logout(request, response, ReflectUtil.getConfigTokenCache());
+
+		//redirect logout page
+		response.sendRedirect(SSOConfig.getLogoutUrl());
 	}
 
 	/**
@@ -158,15 +158,25 @@ public class SSOHelper {
 	}
 
 	/**
+	 * 清除登录状态
+	 * <p>
+	 * @param request
+	 * @param response
+	 * @return boolean <p>true 成功, false 失败</p>
+	 */
+	public static boolean loginClear( HttpServletRequest request, HttpServletResponse response ) {
+		//delete cookie
+		return logout(request, response, ReflectUtil.getConfigTokenCache());
+	}
+	
+	/**
 	 * 重新登录
 	 * <p>
 	 * 退出当前登录状态、重定向至登录页.
 	 * @param request
 	 * @param response
 	 */
-	public static void loginAgain(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		//logout
-		logout(request, response);
+	public static void login(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String retUrl = HttpUtil.getQueryString(request, SSOConfig.getEncoding());
 		logger.debug("loginAgain redirect pageUrl.." + retUrl);
 
