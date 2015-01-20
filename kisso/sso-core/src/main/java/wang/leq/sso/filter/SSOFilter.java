@@ -69,7 +69,7 @@ public class SSOFilter implements Filter {
 				/**
 				 * 重新登录
 				 */
-				SSOHelper.loginAgain(req, res);
+				SSOHelper.login(req, res);
 				return ;
 			} else {
 				req.setAttribute(SSOConstant.SSO_TOKEN_ATTR, token);
