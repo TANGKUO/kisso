@@ -14,11 +14,11 @@ Usage
 [kisso-test-sso](https://github.com/leqwang/kisso/tree/master/kisso/test-sso)
 
 （1）sso 登录状态
-![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/sso.jpg "Kisso,login cookie")
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/images/sso.jpg "Kisso,login cookie")
 
 （2）跨域登录
 
-![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/cl.jpg "Kisso,crossdomain login")
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/images/cl.jpg "Kisso,crossdomain login")
 
 hosts:
 --------------------------------------------
@@ -27,10 +27,10 @@ hosts:
 
 
 访问 my.web.com:8090/index.html  如果未登录会重定向至sso域登录页面
-![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/nologin.jpg "Kisso,crossdomain login")
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/images/nologin.jpg "Kisso,crossdomain login")
 
 登录成功 my.web.com 如图
-![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/login.jpg "Kisso,crossdomain login")
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/images/login.jpg "Kisso,crossdomain login")
 
 
 Supports
@@ -54,9 +54,9 @@ Futures
 1、实现完整 sso 工程实例
 
 
-开源赞助我(支付宝): hubinmdj@163.com
+开源赞助我(支付宝)
 ====================
-![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/donate.png "开源赞助我(支付宝)")
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/images/donate.png "开源赞助我(支付宝)")
 
 copyright
 ====================
